@@ -1,0 +1,19 @@
+package RecursiveFactorial;
+import java.util.Scanner;
+
+public class RecursiveFactorial {
+	
+	static int Factorial(int x) {
+		if(x > 1) {
+			return x * Factorial(x -1);
+		}
+		return 1;
+	}
+
+	public static void main(String[] args){
+		System.out.print("Please enter a number: ");
+		Scanner scan = new Scanner(System.in);
+		int num = scan.nextInt();
+		System.out.println(num + "! = " + Factorial(num));
+	}
+}
