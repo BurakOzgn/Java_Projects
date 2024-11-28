@@ -1,0 +1,29 @@
+package PiecewiseFunction;
+import java.util.Scanner;
+
+public class PiecewiseFunction {
+	
+	public static int colladz(int x) {
+		
+		int counter = 0;
+		
+		while(x != 1) {
+			if(x%2==0) {
+				x /= 2;
+			}
+			else {
+				x = (x*3) + 1;
+			}
+			counter++;
+		}
+		
+		return counter;
+	}
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Please enter a number: ");
+		int num = scan.nextInt();
+		System.out.println("It was done in " + colladz(num) + " steps");
+	}
+}
