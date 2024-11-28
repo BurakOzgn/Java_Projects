@@ -1,0 +1,34 @@
+package BasamakDegeriToplama;
+import java.util.Scanner;
+
+public class BasamakDegeriToplama {
+	
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Please enter a number: ");
+		int num = scan.nextInt();
+		
+		System.out.println(SumOfDigit(num));
+		
+		
+	}
+	
+	public static int SumOfDigit(int x) {
+		
+		    int sum = 0;
+		
+            while(x != 0) {
+			
+			int digitValue = x % 10;
+			sum += digitValue;	
+			x = x / 10;
+			
+			
+		}
+            
+         return sum;
+				
+	}
+
+}
