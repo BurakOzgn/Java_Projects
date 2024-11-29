@@ -1,0 +1,23 @@
+package Faktoriyel;
+import java.util.Scanner;
+
+public class Faktoriyel {
+	
+	public static int Factorial(int x) {
+		int factorial = 1;
+		for(int i = 1; i <= x; i++) {
+			factorial *= i;
+			System.out.println(i + "! = " + factorial);
+		}
+		return factorial;
+	}
+	
+	public static void main(String[] args) {
+		
+    Scanner scan = new Scanner(System.in);
+		System.out.print("Please enter a number: ");
+		int num = scan.nextInt();
+		Factorial(num);
+	}
+
+}
