@@ -21,6 +21,21 @@ public class vowelMethod {
 			
 			case 'u' : counter++;
 			break;
+			
+			case 'A' : counter++;
+			break;
+			
+			case 'E' : counter++;
+			break;
+			
+			case 'I' : counter++;
+			break;
+			
+			case 'O' : counter++;
+			break;
+			
+			case 'U' : counter++;
+			break;
 			}
 		}
 		
