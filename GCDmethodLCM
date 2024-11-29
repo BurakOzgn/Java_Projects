@@ -1,0 +1,29 @@
+package GCDmethodLCM;
+import java.util.Scanner;
+
+public class GCDmethodLCM {
+	
+	public static int GLD(int x, int y) {
+		while(y != 0) {
+			int mod = x%y;
+			x = y;
+			y = mod;
+		}
+		return x;
+	}
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Please enter a first number: ");
+		int num1 = scan.nextInt();
+		
+		System.out.print("Please enter a second number: ");
+		int num2 = scan.nextInt();
+		
+		System.out.println("GLD: " + GLD(num1,num2));
+		System.out.println("LCM: " + (num1*num2)/GLD(num1,num2));
+
+	}
+
+}
