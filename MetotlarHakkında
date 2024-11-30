@@ -1,0 +1,36 @@
+Metotların temel amacına baktığımızda, her bir metot belirli bir görevi yerine getirerek kodun daha okunabilir ve anlaşılır olmasını sağlar. 
+Bunun yanı sıra, tekrar tekrar kullanılacak bir işlemi her ihtiyaç duyulduğunda yeniden yazmak yerine, bu işlemi bir metot içerisinde tanımlayarak 
+istenilen her yerde kolayca çağırmak mümkündür. Bu yaklaşım hem zamandan tasarruf sağlar hem de kodun düzenini ve tutarlılığını artırır. Ayrıca
+erişim kontrolü de getirilebilmesi artı özelliklerindendir.
+
+Public olarak oluşturulan metotlar diğler sınıflar tarafından erişilebilir hale gelmektedir, ancak bunu private olarak
+değiştirirsek sadece bulunduğu sınıfta geçerli olan bir metot haline gelir ve diğer sınıflar bu metota erişemez.
+
+Eğer diğer sınıflarda bu metota erişmek istersek metodun bulunduğu sınıfı yeni sınıfımıza ekliyoruz.
+//ÖRNEK Class1 de bulunan metoda yeni oluşturduğumuz Class2 de şu şekilde ulaşabiliriz.
+package Class2;
+import Class1.Class1;
+
+public class Example {
+	public static void main(String[] args) {
+       Class1 Class1 = new Class1();
+       Class1.MyMethod();
+	}
+}
+
+Metodun bir sınıfa ait olduğunu belirtmek için de static kodu kullanılır.
+
+Eğer bir metot bir değer döndürüyor olsaydı, dönüş tipi olarak int, String, boolean gibi bir veri türü belirtilirdi.
+Ancak void kullanılan metotlar, yalnızca bir işlem gerçekleştirir ve herhangi bir sonuç döndürmez. Bu yüzden 
+return yani değer döndür kodu kullanılmasına gerek yoktur.
+
+//Değer döndürmeyen void metotdu
+public static void MyMethod() {
+    System.out.println("Bu bir void metottur!");
+}
+
+
+// Dönüş tipi `int` olan bir metot:
+public static int addNumbers(int a, int b) {
+    return a + b; //return kullanılmak zorundadır
+}
