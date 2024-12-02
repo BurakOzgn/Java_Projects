@@ -1,0 +1,25 @@
+package Exercises;
+
+import java.util.Scanner;
+
+public class Exercises {
+	
+	//GİRİLEN KELİMENİN ORTASINDA BULUNAN HARFİ VEREN KOD
+	
+	public static String middleLetter(String word) {
+		if(word.length() == 1) {
+			return word;
+		}
+		
+		String remainingWord = word.substring(1, word.length() -1);
+		return middleLetter(remainingWord);
+	}
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Please enter a word: ");
+		String word = scan.nextLine();
+		System.out.println(middleLetter(word));
+	}
+
+}
