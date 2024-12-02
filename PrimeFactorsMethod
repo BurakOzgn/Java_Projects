@@ -1,0 +1,33 @@
+package MetotCarpanlar;
+import java.util.Scanner;
+
+public class MetotCarpanlar {
+	
+	public static boolean isPrime(int i) {
+		if(i < 1) {
+			return false;
+		}
+		
+		for(int j = 2; j < i; j++) {
+			if(i%j==0) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	public static void primeFactors(int x) {
+		for(int i = 2; i <= x; i++) {
+			if(x%i==0 && isPrime(i)) {
+				System.out.print(i + " ");
+			}
+		}
+	}
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Please enter a number: ");
+		int num = scan.nextInt();
+		primeFactors(num);
+	}
+}
