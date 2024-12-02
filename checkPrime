@@ -1,0 +1,25 @@
+package MetotCarpanlar;
+import java.util.Scanner;
+
+public class MetotCarpanlar {
+	
+	public static void isPrime(int x) {
+		if (x <= 1) {
+            System.out.println("Number is not prime.");
+            return;
+        }
+        for (int i = 2; i <= Math.sqrt(x); i++) {
+            if (x % i == 0) {
+                System.out.println("Number is not prime.");
+                return;
+            }
+        }
+        System.out.println("Number is prime."); // 2 GİRİLİRSE ASALDIR YAZACAK
+	}
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Please enter a number: ");
+		int num = scan.nextInt();
+		isPrime(num);
+	}
+}
