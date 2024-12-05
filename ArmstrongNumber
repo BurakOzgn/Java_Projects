@@ -1,0 +1,38 @@
+package Example;
+import java.util.Scanner;
+
+public class Example {
+	
+	public static int digitsCounter(int y) {
+		int counter = 0;
+		while(y != 0) {
+			y /= 10;
+			counter++;
+		}
+		
+		return counter;
+	}
+	
+	public static void isArmstrong(int x) {
+		int y = x;
+		int sum = 0;
+		while(x != 0) {
+			sum += Math.pow(x%10, digitsCounter(y));
+			x /= 10;
+		}
+		
+		if(y == sum) {
+			System.out.println(y + " is a armstrong number");
+		}
+		else {
+			System.out.println(y + "is not a armstrong number");
+		}
+	}
+	
+	public static void main(String[] args) {
+		System.out.print("Please enter a number: ");
+		Scanner scan = new Scanner(System.in);
+		int num = scan.nextInt();
+		isArmstrong(num);
+	}
+}
