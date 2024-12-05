@@ -1,0 +1,42 @@
+package Example;
+import java.util.Scanner;
+
+public class Example {
+	
+	public static int digitsCounter(int y) {
+		int counter = 0;
+		while(y != 0) {
+			y /= 10;
+			counter++;
+		}
+		
+		return counter;
+	}
+	
+	public static boolean isArmstrong(int x) {
+		int y = x;
+		int sum = 0;
+		while(x != 0) {
+			sum += Math.pow(x%10, digitsCounter(y));
+			x /= 10;
+		}
+		return sum == y;
+	}
+	
+	public static int numberOfArmstrongNumber(int[] numbers) {
+		int numberOfArmstrongNumber = 0;
+		for(int number : numbers) {
+			if(isArmstrong(number)) {
+				numberOfArmstrongNumber++;
+				System.out.print(number + " ");
+			}
+		}
+		
+		return numberOfArmstrongNumber;
+	}
+	
+	public static void main(String[] args) {
+		int[] numbers = {56,407,370};
+ 		System.out.println("\nNumber of Armstrong numbers are: " + numberOfArmstrongNumber(numbers));
+	}
+}
