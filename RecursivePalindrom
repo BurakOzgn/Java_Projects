@@ -1,0 +1,32 @@
+package Recursive;
+import java.util.Scanner;
+
+public class Recursive {
+	
+	public static String palindromRecursive(String text) {
+		
+		if(text.length() != 0) 
+		{
+			char lastchar = text.charAt(text.length() -1);
+			String remainingString = text.substring(0, text.length() -1);
+			return lastchar + palindromRecursive(remainingString);
+		}
+		return "";
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Lütfen bir kelime girin: ");
+		String word = scan.next();
+		System.out.println(palindromRecursive(word));
+		
+		if(palindromRecursive(word).equalsIgnoreCase(word)) {
+			System.out.printf("%s is a palindrom", word);
+		}
+		else {
+			System.out.printf("%s is not a palindrom", word);
+		}
+	}
+
+}
