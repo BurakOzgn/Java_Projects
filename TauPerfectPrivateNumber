@@ -1,0 +1,65 @@
+package Examples;
+import java.util.Scanner;
+
+public class Examples {
+	
+	public static void isPerfectNumber(int x) { // MÜKEMMEL SAYI
+		int sum = 0;
+		for(int i = 1; i <= x/2; i++) {
+			if(x%i==0) {
+				sum += i;
+			}
+		}
+		
+		if(sum == x) {
+			System.out.printf("%d is a perfect number \n",x);
+		} else {
+			System.out.printf("%d is not a perfect number \n",x);
+		}
+	}
+	
+	public static void isPrivate(int x) {  //ASAL SAYI
+		int count = 0;
+		if(x < 2) {
+			System.out.printf("%d is not a private number \n",x);
+		}
+		
+		for(int i = 3; i < x; i++) {
+			if(x%i==0) {
+				count++;
+			}
+		}
+		
+		if(count == 0) {
+			System.out.printf("%d is a private number \n",x);
+		} else {
+			System.out.printf("%d is not a private number \n",x);
+		}
+	}
+	
+	public static void isTau(int x) { //TAU SAYISI
+		int count = 0;
+		for(int i = 1; i <= x; i++) {
+			if(x%i==0) {
+				count++;
+			}
+		}
+		
+		if(x%count == 0) {
+			System.out.printf("%d is a tau number \n",x);
+		}
+		else {
+			System.out.printf("%d is not a tau number \n",x);
+		}
+	}
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Please enter a number: ");
+		int num = scan.nextInt();
+		
+		isPerfectNumber(num);
+		isPrivate(num);
+		isTau(num);
+	}
+}
