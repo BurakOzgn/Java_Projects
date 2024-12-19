@@ -1,0 +1,52 @@
+Attributes (Özellikler): Sınıfın içerisinde tanımlanan değişkenlerdir.Bu değişkenler, 
+sınıfa ait her nesnenin taşıyacağı özelliklerdir.
+Örneğin, id, number, name, surname, mail, ve grade bu sınıfın attributes kısmıdır.
+
+//EXAMPLE
+long id;
+String name;
+String surname;
+_____________________________________________________________________________________________________________________________
+No-Argument Constructor (NoArgConstructor): Parametresiz bir yapıcı (constructor) metottur.
+Sınıftan bir nesne oluşturulduğunda, herhangi bir başlangıç değeri sağlamadan bu yapıcı kullanılır.
+Java'da, eğer hiçbir yapıcı yazılmazsa default constructor otomatik olarak eklenir.
+Ancak, başka bir yapıcı (örneğin all-arg constructor) yazarsanız, Java default constructor'ı otomatik olarak eklemez.
+Bu yüzden manuel olarak yazmanız gerekir.
+
+public Student() {
+    // Boş bir constructor
+}
+__________________________________________________________________________________________________________________________
+
+All-Argument Constructor (AllArgConstructor): Tüm özellikler (attributes) için parametre alan bir yapıcıdır.
+Bu tür bir constructor, nesne oluşturulurken tüm özelliklere başlangıç değerleri atamak için kullanılır.
+
+public Student(long id, String number, String name, String surname, String mail, char grade) {
+    this.id = id;
+    this.number = number;
+    this.name = name;
+    this.surname = surname;
+    this.mail = mail;
+    this.grade = grade;
+}
+__________________________________________________________________________________________________________________________
+
+this Anahtar Kelimesi: Sınıfın bir özelliğini, metot parametresinden ayırt etmek için kullanılır.
+__________________________________________________________________________________________________________________________
+toString() Metodu:
+Bir nesneyi yazdırırken veya bir string ifadeye dönüştürürken, neyin gösterileceğini tanımlar.
+@Override etiketi, bu metodun Object sınıfından gelen varsayılan toString metodunu ezdiğini belirtir.
+
+@Override
+public String toString() {
+    return name + surname;
+}
+________________________________________________________________________________________________________________________
+
+Student student1 = new Student(); // Parametresiz nesne oluşturma (NO-ARG-CONSTRUCTOR)
+student1.name = "Ali";
+student1.surname = "Veli";
+
+//PARAMETRELİ NESNE OLUŞTURMA (ALL-ARGS-CONSTRUCTOR)
+Student student2 = new Student(1, "12345", "Ahmet", "Kaya", "ahmet.kaya@mail.com", 'A');
+System.out.println(student2);
