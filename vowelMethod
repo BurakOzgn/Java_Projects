@@ -3,7 +3,7 @@ package vowelMethod;
 public class vowelMethod {
 	
 	public static int vowel(String text) {
-		
+		//GİRİLEN METİNDE KAÇ TANE SESLİ HARF OLDUĞUNU VEREN KOD
 		int counter = 0;
 		for(int i = 0; i < text.length(); i++) {
 			switch(text.charAt(i)) {
