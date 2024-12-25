@@ -2,7 +2,7 @@ package Example;
 import java.util.Scanner;
 
 public class Example {
-	
+	//ÇOK BOYUTLU DİZİ ELEMANLARININ ARMSTRONG SAYISI OLUP OLMADIĞINI KONTROL EDEN KOD
 	public static int digitsCounter(int y) {
 		int counter = 0;
 		while(y != 0) {
