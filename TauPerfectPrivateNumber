@@ -58,8 +58,8 @@ public class Examples {
 		System.out.print("Please enter a number: ");
 		int num = scan.nextInt();
 		
-		isPerfectNumber(num);
-		isPrivate(num);
-		isTau(num);
+		isPerfectNumber(num); //SAYININ MÜKEMMEL SAYI OLUP OLMADIĞINI KONTROL EDER
+		isPrivate(num); // ASAL SAYI OLUP OLMADIĞINI KONTROL EDER
+		isTau(num); // TAU SAYISI OLUP OLMADIĞINI KONTROL EDER
 	}
 }
