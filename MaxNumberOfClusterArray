@@ -2,7 +2,7 @@ package My_Java_Project;
 
 public class My_Java_Project {
 	public static void main(String[] args) {
-		
+		//ÇOK BOYUTLU DİZİDEKİ EN BÜYÜK ELEMANI BULMA
 		int[][] numbers = {{1,2,3,4,5,6,7},{8,9,10,11,12}};
 		int max = numbers[0][0];
 		
