@@ -1,0 +1,72 @@
+package OOP;
+
+public class Student {
+	
+	//ATTRIBUTES, SINIFIN ÖZELLİKLERİ (DEĞİŞKENLERİ)'DİR
+	long id;
+	
+	String firstName;
+	
+	String lastName;
+	
+	String studentNumber;
+	
+	char gradeNote;
+	
+	
+	//NESNE STRİNG İFADEYE DÖNÜŞTÜRÜLÜP SUNULUR
+	@Override
+	public String toString() {
+		return firstName + " " + lastName + " " + studentNumber + " " + gradeNote;
+	}
+	
+	//NO-ARG CONSTRUCTOR
+	//NESNE OLUŞTURURKEN PARAMETRE İSTEMEZ, VARSAYILAN OLARAK SINIFA GELİR
+	//NORMALDE YAZILMAZ ANCAK ALL-ARG CONSTRUCTOR KULLANILIRSA YAZILMASI GEREKİR
+	public Student() {
+		
+	}
+	
+	//ALL-ARG CONSTRUCTOR (PARAMETRELİ NESNE OLŞTURMAK İÇİN YAZILIR)
+	public Student(long id, String firstName, String lastName, String studentNumber, char gradeNote) {
+		this.id = id; //DIŞARIDAN GELEN VERİLER BU SINIFIN ÖZELLİKLERİ İLE BAĞDAŞTIRILIR
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.studentNumber = studentNumber;
+		this.gradeNote = gradeNote;
+	}
+	
+	//GETTER KOMUTLARI (SINIFIN BİR ALANININ VERİSİNİ ALMAK(VE OKUMAK) İÇİN YAZILIR)
+	public String getFirstName() {
+		return this.firstName;
+	}
+	
+	public String getLastName() {
+		return this.lastName;
+	}
+	
+	public String getStudentNumber() {
+		return this.studentNumber;
+	}
+	
+	public char getGradeNote() {
+		return this.gradeNote;
+	}
+	
+	//SETTER KOMUTLARI (SINIFIN BİR ALANININ VERİSİNİ ALMAK(VE DEĞİŞTİRMEK) İÇİN YAZILIR)
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	public void setStudentNumber(String studentNumber) {
+		this.studentNumber = studentNumber;
+	}
+	
+	public void setGradeNote(char gradeNote) {
+		this.gradeNote = gradeNote;
+	}
+}
