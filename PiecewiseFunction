@@ -2,7 +2,7 @@ package PiecewiseFunction;
 import java.util.Scanner;
 
 public class PiecewiseFunction {
-	
+	//GİRİLEN SAYININ KAÇ ADIMDA SIFIRA İNDİRGENDİĞİNİ SÖYLEYEN KOD
 	public static int colladz(int x) {
 		
 		int counter = 0;
