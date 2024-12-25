@@ -2,7 +2,7 @@ package Example;
 import java.util.Scanner;
 
 public class Example {
-	
+	//GİRİLEN SAYININ ARMSTRONG SAYISI OLUP OLMADIĞINA BAKMA
 	public static int digitsCounter(int y) {
 		int counter = 0;
 		while(y != 0) {
