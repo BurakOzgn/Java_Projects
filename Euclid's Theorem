@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class Example4 {
 	//ÖKLİD TEOREMİ İLE EBOB BULAN KOD
 	public static void GLDLCM(int x, int y) {
+                //X VE Y DEĞERLERİ DEĞİŞECEĞİ İÇİN ONLARI SABİT TUTMA AMAÇLI
+                //YENİ DEĞİŞKENLERE AKTARIYORUM, EKOK BULMA FORMÜLÜ İÇİN LAZIM OLACAKLAR
 		int x2 = x;
 		int y2 = y;
 		while(y != 0) {
