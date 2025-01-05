@@ -1,15 +1,18 @@
-package GCDmethodLCM;
+package Example4;
 import java.util.Scanner;
 
-public class GCDmethodLCM {
+public class Example4 {
 	//ÖKLİD TEOREMİ İLE EBOB BULAN KOD
-	public static int GLD(int x, int y) {
+	public static void GLDLCM(int x, int y) {
+		int x2 = x;
+		int y2 = y;
 		while(y != 0) {
 			int mod = x%y;
 			x = y;
 			y = mod;
 		}
-		return x;
+		
+		System.out.println("GLD(EBOB): " + x + " LCM(EKOK): " + (x2*y2)/x);
 	}
 
 	public static void main(String[] args) 
@@ -21,9 +24,7 @@ public class GCDmethodLCM {
 		System.out.print("Please enter a second number: ");
 		int num2 = scan.nextInt();
 		
-		System.out.println("GLD: " + GLD(num1,num2));
-		System.out.println("LCM: " + (num1*num2)/GLD(num1,num2)); //EBOB BİLGİSİ İLE EKOK DA BULUNUR
-
+		GLDLCM(num1,num2);
 	}
 
 }
